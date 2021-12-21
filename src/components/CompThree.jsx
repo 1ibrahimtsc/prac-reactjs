@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 
+import { UserConsumer } from './UserContext';
+
 export class CompThree extends Component {
     render(){
         return (
-            <div>
-                <h1>Component Three and name is {this.props.namefromtwo }</h1>
-            </div>
+            <UserConsumer>
+                {
+                    (value) => {
+                        return <div>
+                        <h1>Hello, {value} and this is from Compt Three </h1>
+                    </div>
+                    }
+                }
+            </UserConsumer>
+            
         )
     }
 }

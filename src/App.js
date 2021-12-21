@@ -5,12 +5,15 @@
 //import ComponentA from './components/ComponentA';
 //import ComponentB from './components/ComponentB';
 import CompOne from './components/CompOne';
+import { UserProvider } from './components/UserContext';
 
 
 function App() {  
  return (
-   <div>
-       <CompOne name="John" />
+   <div>       
+       <UserProvider value="John">
+       <CompOne />
+        </UserProvider>
    </div>
  )
 }
