@@ -3,6 +3,7 @@ import HookCounter from './components/HookCounter';
 //import UseEffectonClass from './components/UseEffectonClass';
 //import UseEffectFunction from './components/UseEffectFunction';
 import MouseMove from './components/MouseMove';
+import FetchData from './components/FetchData';
 
 function App() {  
  return (
@@ -11,6 +12,7 @@ function App() {
        <HookCounter />
      { /* <UseEffectFunction /> */ }  
        <MouseMove />
+       <FetchData />
    </div>
  )
 }
