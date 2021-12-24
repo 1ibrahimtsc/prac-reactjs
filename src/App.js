@@ -7,6 +7,7 @@ import MouseMove from './components/MouseMove';
 import FetchData from './components/FetchData';
 import ComponentA from './components/ComponentA';
 import ParentComp from './components/ParentComp';
+import Usememohook from './components/Usememohook';
 
 export const UserContext = React.createContext()
 export const ProfileContext = React.createContext()
@@ -24,7 +25,8 @@ function App() {
               <ComponentA />
        </ProfileContext.Provider>
      </UserContext.Provider>  
-     <ParentComp />   
+     <ParentComp />  
+     <Usememohook /> 
    </div>
  )
 }
