@@ -6,6 +6,7 @@ import HookCounter from './components/HookCounter';
 import MouseMove from './components/MouseMove';
 import FetchData from './components/FetchData';
 import ComponentA from './components/ComponentA';
+import ParentComp from './components/ParentComp';
 
 export const UserContext = React.createContext()
 export const ProfileContext = React.createContext()
@@ -22,7 +23,8 @@ function App() {
        <ProfileContext.Provider value={"something"} >
               <ComponentA />
        </ProfileContext.Provider>
-     </UserContext.Provider>     
+     </UserContext.Provider>  
+     <ParentComp />   
    </div>
  )
 }
