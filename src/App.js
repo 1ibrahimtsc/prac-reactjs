@@ -1,36 +1,50 @@
-import React from 'react';
-import Posts from './components/PostForm';
-import HookCounter from './components/HookCounter';
-//import UseEffectonClass from './components/UseEffectonClass';
-//import UseEffectFunction from './components/UseEffectFunction';
-import MouseMove from './components/MouseMove';
-import FetchData from './components/FetchData';
-import ComponentA from './components/ComponentA';
-import ParentComp from './components/ParentComp';
-import Usememohook from './components/Usememohook';
-import Input from './components/Input';
+import React from "react";
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Users from './components/Users';
+import Posts from './components/Posts';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
-export const UserContext = React.createContext()
-export const ProfileContext = React.createContext()
+export default function App() {
+  return (
+    <Router>
+      <div>
+        <Navbar />
+          
+        
 
-function App() {  
- return (
-   <div>       
-     {/* <Posts /> */}  
-      {/** <HookCounter /> */} 
-     { /* <UseEffectFunction /> */ }  
-     {/** <MouseMove /> */}  
-     {/** <FetchData /> */}  
-     <UserContext.Provider value={"John"} >
-       <ProfileContext.Provider value={"something"} >
-              <ComponentA />
-       </ProfileContext.Provider>
-     </UserContext.Provider>  
-     <ParentComp />  
-     <Usememohook /> 
-     <Input />
-   </div>
- )
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/posts" element={<Posts />} />
+          
+                      
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+{
+  /*
+  function Home() {
+  return <h2>Home</h2>;
 }
 
-export default App;
+function About() {
+  return <h2>About</h2>;
+}
+
+function Users() {
+  return <h2>Users</h2>;
+}
+  */
+}
